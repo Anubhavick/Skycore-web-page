@@ -2,6 +2,10 @@
 import React, { useState } from 'react';
 
 const EnquiryForm: React.FC = () => {
+    // CONFIG: replace the Formspree endpoint below with your Formspree form endpoint.
+    // Sign up at https://formspree.io and copy the endpoint (e.g. https://formspree.io/f/xxxxx)
+    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/myzdlkgk';
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -9,22 +13,57 @@ const EnquiryForm: React.FC = () => {
         message: '',
     });
     const [submitted, setSubmitted] = useState(false);
+    const [isSending, setIsSending] = useState(false);
+    const [error, setError] = useState<string | null>(null);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // Here you would integrate a service like EmailJS or Formspree
-        console.log('Form data submitted:', formData);
-        setSubmitted(true);
-        // Reset form after a few seconds
-        setTimeout(() => {
-            setSubmitted(false);
-            setFormData({ name: '', email: '', phone: '', message: '' });
-        }, 3000);
+        // simple client-side validation
+        if (!formData.name || !formData.email) return;
+
+        try {
+            setIsSending(true);
+            setError(null);
+
+            // Submit to Formspree
+            if (FORMSPREE_ENDPOINT && !FORMSPREE_ENDPOINT.includes('YOUR_FORMSPREE_ID')) {
+                const fd = new FormData();
+                fd.append('name', formData.name);
+                fd.append('email', formData.email);
+                fd.append('phone', formData.phone);
+                fd.append('message', formData.message);
+                const res = await fetch(FORMSPREE_ENDPOINT, {
+                    method: 'POST',
+                    headers: {
+                        // ask Formspree to return JSON instead of redirecting
+                        'Accept': 'application/json'
+                    },
+                    body: fd,
+                });
+                if (!res.ok) {
+                    const text = await res.text().catch(() => '');
+                    throw new Error(`Formspree error ${res.status} ${text}`);
+                }
+            }
+
+            console.log('Form data submitted:', formData);
+            setSubmitted(true);
+            setIsSending(false);
+            // Reset form after a few seconds
+            setTimeout(() => {
+                setSubmitted(false);
+                setFormData({ name: '', email: '', phone: '', message: '' });
+            }, 3000);
+        } catch (err) {
+            console.error('Enquiry submit failed', err);
+            setError('Failed to send enquiry. Please try again later.');
+            setIsSending(false);
+        }
     };
 
     if (submitted) {
@@ -94,11 +133,18 @@ const EnquiryForm: React.FC = () => {
             <div>
                 <button
                     type="submit"
-                    className="w-full bg-[#6ED25D] text-brand-dark font-bold py-3 px-4 rounded-md hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105"
+                    disabled={isSending}
+                    className={`w-full ${isSending ? 'bg-green-300 cursor-wait' : 'bg-[#6ED25D] hover:bg-opacity-80 transform hover:scale-105'} text-brand-dark font-bold py-3 px-4 rounded-md transition-all duration-300`}
                 >
-                    Send Enquiry
+                    {isSending ? 'Sending…' : 'Send Enquiry'}
                 </button>
             </div>
+            {/* Accessibility: live region for error messages */}
+            {error && (
+                <div role="alert" aria-live="assertive" className="mt-3 text-sm text-red-400">
+                    {error}
+                </div>
+            )}
         </form>
     );
 };
