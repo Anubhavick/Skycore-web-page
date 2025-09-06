@@ -13,7 +13,7 @@ export const AboutSection: React.FC = () => {
         <section id="about-section" className="bg-brand-dark text-white">
             {/* Page Header */}
             <div className="bg-brand-gray py-24 text-center">
-                <h1 className="text-4xl md:text-5xl font-extrabold">About Skycore Academy</h1>
+                <h1 className="text-4xl md:text-5xl font-extrabold">About Skycore Aviation Academy</h1>
                 <p className="mt-4 text-lg text-brand-light-gray">Pioneering the future of aviation training.</p>
             </div>
 
