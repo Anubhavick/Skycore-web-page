@@ -39,14 +39,14 @@ const Header: React.FC<HeaderProps> = ({ onEnquireClick }) => {
                 <div className="flex items-center justify-between h-20">
                     <div className="flex-shrink-0">
                         <Link to="/" className="text-white text-2xl font-bold flex items-center">
-                        <img src="/assets/skycore-logo.svg" alt="Skycore Logo" className="h-8 w-8 mr-2" />
+                        <img src="/assets/skycore-logo.svg" alt="Skycore Logo" className="h-11 w-11 mr-2" />
                             Skycore
                         </Link>
                     </div>
                     <div className="hidden md:block">
                         <div className="ml-10 flex items-center space-x-4">
                             {navLinks}
-                            <button onClick={onEnquireClick} className="bg-brand-blue text-brand-dark font-bold py-2 px-4 rounded-md hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105">
+                            <button onClick={onEnquireClick} className="bg-[#6ED25D] text-brand-dark font-bold py-2 px-4 rounded-md hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105">
                                 Enquire Now
                             </button>
                         </div>

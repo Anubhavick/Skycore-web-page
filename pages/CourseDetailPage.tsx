@@ -17,7 +17,7 @@ const AccordionItem: React.FC<{ faq: { question: string; answer: string; } }> = 
                 className="w-full flex justify-between items-center text-left py-4"
             >
                 <span className="font-semibold text-white">{faq.question}</span>
-                <i className={`fa-solid fa-chevron-down text-brand-blue transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}></i>
+                <i className={`fa-solid fa-chevron-down text-[#6ED25D] transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}></i>
             </button>
             <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96' : 'max-h-0'}`}>
                 <p className="text-brand-light-gray pb-4">{faq.answer}</p>
@@ -53,17 +53,17 @@ const CourseDetailPage: React.FC<CourseDetailPageProps> = ({ onEnquireClick }) =
                     <div className="lg:col-span-2 space-y-12">
                         {/* Overview */}
                         <section>
-                            <h2 className="text-3xl font-bold text-brand-blue mb-4">Course Overview</h2>
+                            <h2 className="text-3xl font-bold text-[#6ED25D] mb-4">Course Overview</h2>
                             <p className="text-brand-light-gray leading-relaxed">{course.overview}</p>
                         </section>
                         
                         {/* Key Highlights */}
                         <section>
-                            <h2 className="text-3xl font-bold text-brand-blue mb-4">Key Highlights</h2>
+                            <h2 className="text-3xl font-bold text-[#6ED25D] mb-4">Key Highlights</h2>
                              <ul className="space-y-4">
                                 {course.highlights.map((highlight, index) => (
                                     <li key={index} className="flex items-start text-lg">
-                                        <i className="fa-solid fa-plane-circle-check text-brand-blue mt-1 mr-3"></i>
+                                        <i className="fa-solid fa-plane-circle-check text-[#6ED25D] mt-1 mr-3"></i>
                                         <span className="text-white">{highlight}</span>
                                     </li>
                                 ))}
@@ -88,7 +88,7 @@ const CourseDetailPage: React.FC<CourseDetailPageProps> = ({ onEnquireClick }) =
                         
                         {/* FAQs */}
                         <section>
-                            <h2 className="text-3xl font-bold text-brand-blue mb-4">Frequently Asked Questions</h2>
+                            <h2 className="text-3xl font-bold text-[#6ED25D] mb-4">Frequently Asked Questions</h2>
                             <div className="space-y-2">
                                 {course.faqs.map((faq, index) => (
                                     <AccordionItem key={index} faq={faq} />

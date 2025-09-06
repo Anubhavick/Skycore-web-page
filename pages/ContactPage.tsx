@@ -25,19 +25,19 @@ const ContactPage: React.FC = () => {
                              <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
                              <div className="space-y-4 text-lg">
                                 <p className="flex items-start">
-                                    <i className="fa-solid fa-map-marker-alt mt-1 mr-4 text-brand-blue w-6 text-center"></i>
+                                    <i className="fa-solid fa-map-marker-alt mt-1 mr-4 text-[#6ED25D] w-6 text-center"></i>
                                     <span className="text-brand-light-gray">123 Aviation Road, Near IGI Airport, New Delhi, 110037, India</span>
                                 </p>
                                 <p className="flex items-center">
-                                    <i className="fa-solid fa-phone mr-4 text-brand-blue w-6 text-center"></i>
-                                    <a href="tel:+919876543210" className="text-brand-light-gray hover:text-brand-blue">+91 98765 43210</a>
+                                    <i className="fa-solid fa-phone mr-4 text-[#6ED25D] w-6 text-center"></i>
+                                    <a href="tel:+919876543210" className="text-brand-light-gray hover:text-[#6ED25D]">+91 xxxxx xxxxx</a>
                                 </p>
                                 <p className="flex items-center">
-                                    <i className="fa-solid fa-envelope mr-4 text-brand-blue w-6 text-center"></i>
-                                    <a href="mailto:admissions@aeroleap.com" className="text-brand-light-gray hover:text-brand-blue">admissions@aeroleap.com</a>
+                                    <i className="fa-solid fa-envelope mr-4 text-[#6ED25D] w-6 text-center"></i>
+                                    <a href="mailto:admissions@aeroleap.com" className="text-brand-light-gray hover:text-[#6ED25D]">skycore@gmail.com</a>
                                 </p>
                                  <p className="flex items-center">
-                                    <i className="fa-solid fa-clock mr-4 text-brand-blue w-6 text-center"></i>
+                                    <i className="fa-solid fa-clock mr-4 text-[#6ED25D] w-6 text-center"></i>
                                     <span className="text-brand-light-gray">Mon - Sat: 9:00 AM - 6:00 PM</span>
                                 </p>
                              </div>

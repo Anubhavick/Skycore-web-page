@@ -15,19 +15,19 @@ const HomePage: React.FC<HomePageProps> = ({ onEnquireClick }) => {
             {/* Hero Section */}
             <section className="relative h-[80vh] min-h-[500px] flex items-center justify-center text-center text-white -mt-20">
                 <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
-                <img src="https://picsum.photos/1920/1080?grayscale&blur=2" className="absolute inset-0 w-full h-full object-cover" alt="Airplane cockpit" />
+                <img src="/assets/hero-image.jpg" className="absolute inset-0 w-full h-full object-cover" alt="Airplane cockpit" />
                 <div className="relative z-20 max-w-4xl mx-auto px-4">
                     <h1 className="text-4xl md:text-6xl font-black uppercase tracking-wider mb-4">
-                        Empowering <span className="text-brand-blue">Tomorrow's Aviators</span>
+                        Empowering <span className="text-[#6ED25D]">Tomorrow's Aviators</span>
                     </h1>
                     <p className="text-lg md:text-xl text-gray-300 mb-8">
                         World-class flight training for aspiring pilots. Your journey to the cockpit starts here.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <Link to="/courses" className="w-full sm:w-auto bg-brand-blue text-brand-dark font-bold py-3 px-8 rounded-md hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105">
+                        <Link to="/courses" className="w-full sm:w-auto bg-[#6ED25D] text-brand-dark font-bold py-3 px-8 rounded-md hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105">
                             Explore Courses
                         </Link>
-                        <button onClick={onEnquireClick} className="w-full sm:w-auto bg-transparent border-2 border-brand-blue text-brand-blue font-bold py-3 px-8 rounded-md hover:bg-brand-blue hover:text-brand-dark transition-colors duration-300">
+                        <button onClick={onEnquireClick} className="w-full sm:w-auto bg-transparent border-2 border-[#6ED25D] text-[#6ED25D] font-bold py-3 px-8 rounded-md hover:bg-brand-blue hover:text-brand-dark transition-colors duration-300">
                             Enquire Now
                         </button>
                     </div>
