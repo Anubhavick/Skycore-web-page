@@ -75,19 +75,19 @@ export const TESTIMONIALS: Testimonial[] = [
         quote: 'The instructors are incredibly experienced and supportive. AeroLeap didn’t just teach me to fly; they prepared me for a career.',
         name: 'Rohan Sharma',
         title: 'First Officer, Indigo',
-        imageUrl: ''
+        imageUrl: '/image5.jpg'
     },
     {
         quote: 'From the state-of-the-art simulators to the well-maintained aircraft, the training infrastructure is top-notch.',
         name: 'Priya Verma',
         title: 'CPL Holder',
-        imageUrl: ''
+        imageUrl: '/image5.jpg'
     },
     {
         quote: 'The focused DGCA exam preparation was a game-changer. I cleared all my papers in the first attempt thanks to their guidance.',
         name: 'Ankit Desai',
         title: 'ATPL Student',
-        imageUrl: ''
+        imageUrl: '/image5.jpg'
     }
 ];
 
