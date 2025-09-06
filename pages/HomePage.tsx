@@ -16,7 +16,7 @@ const HomePage: React.FC<HomePageProps> = ({ onEnquireClick }) => {
             {/* Hero Section */}
             <section className="relative h-[80vh] min-h-[500px] flex items-center justify-center text-center text-white -mt-20">
                 <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
-                <img src="/assets/hero-image.jpg" className="absolute inset-0 w-full h-full object-cover" alt="Airplane cockpit" />
+                <img src="/hero-image.jpg" className="absolute inset-0 w-full h-full object-cover" alt="Airplane cockpit" />
                 <div className="relative z-20 max-w-4xl mx-auto px-4">
                     <h1 className="text-4xl md:text-6xl font-black uppercase tracking-wider mb-4">
                         Empowering <span className="text-[#6ED25D]">Tomorrow's Aviators</span>

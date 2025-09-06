@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     <div className="space-y-4">
                         <Link to="/" className="text-white text-2xl font-bold flex items-center">
-                        <img src="/assets/skycore-logo.svg" alt="Skycore Logo" className="h-11 w-11 mr-2" />
+                        <img src="/skycore-logo.svg" alt="Skycore Logo" className="h-11 w-11 mr-2" />
                             Skycore
                         </Link>
                         <p className="text-brand-light-gray text-sm">Empowering Tomorrow's Aviators with world-class training and infrastructure.</p>

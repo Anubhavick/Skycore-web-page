@@ -27,7 +27,7 @@ export const AboutSection: React.FC = () => {
                         </p>
                     </div>
                     <div>
-                         <img src="assets/image0.jpg" alt="Flight school hangar" className="rounded-lg shadow-lg" />
+                         <img src="/image0.jpg" alt="Flight school hangar" className="rounded-lg shadow-lg" />
                     </div>
                 </div>
             </section>

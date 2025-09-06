@@ -62,7 +62,7 @@ const Header: React.FC<HeaderProps> = ({ onEnquireClick }) => {
                 <div className="flex items-center justify-between h-20">
                     <div className="flex-shrink-0">
                         <Link to="/" className="text-white text-2xl font-bold flex items-center">
-                        <img src="/assets/skycore-logo.svg" alt="Skycore Logo" className="h-11 w-11 mr-3 filter brightness-125" />
+                        <img src="/skycore-logo.svg" alt="Skycore Logo" className="h-11 w-11 mr-3 filter brightness-125" />
                             <span className="ml-1">Skycore</span>
                         </Link>
                     </div>
