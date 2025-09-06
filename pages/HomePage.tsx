@@ -37,19 +37,25 @@ const HomePage: React.FC<HomePageProps> = ({ onEnquireClick }) => {
 
             {/* Quick About Strip */}
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                    <div className="p-6">
-                        <img/>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center items-stretch">
+                    <div className="p-6 flex flex-col items-center justify-start min-h-[220px]">
+                        <div className="h-36 flex items-center justify-center">
+                            <i className="fa-solid fa-award text-[#6ED25D] text-6xl"></i>
+                        </div>
                         <h3 className="mt-4 text-xl font-bold">Certified Instructors</h3>
                         <p className="mt-2 text-brand-light-gray">Learn from seasoned pilots with thousands of hours of experience.</p>
                     </div>
-                    <div className="p-6">
-                        <img/>
+                    <div className="p-6 flex flex-col items-center justify-start min-h-[220px]">
+                        <div className="h-36 flex items-center justify-center">
+                            <i className="fa-solid fa-plane-up text-[#6ED25D] text-6xl"></i>
+                        </div>
                         <h3 className="mt-4 text-xl font-bold">Real-World Training</h3>
                         <p className="mt-2 text-brand-light-gray">Our curriculum focuses on practical skills for real cockpit scenarios.</p>
                     </div>
-                    <div className="p-6">
-                        <img/>
+                    <div className="p-6 flex flex-col items-center justify-start min-h-[220px]">
+                        <div className="h-36 flex items-center justify-center">
+                            <i className="fa-solid fa-user-tie text-[#6ED25D] text-6xl"></i>
+                        </div>
                         <h3 className="mt-4 text-xl font-bold">DGCA Focused</h3>
                         <p className="mt-2 text-brand-light-gray">Structured courses designed to help you ace all DGCA examinations.</p>
                     </div>
@@ -73,7 +79,7 @@ const HomePage: React.FC<HomePageProps> = ({ onEnquireClick }) => {
                     ))}
                 </div>
                 <div className="text-center mt-12">
-                    <Link to="/courses" className="text-brand-blue font-semibold hover:underline">
+                    <Link to="/courses" className="text-[#6ED25D] font-semibold hover:underline">
                         View All Courses <i className="fa-solid fa-arrow-right ml-1"></i>
                     </Link>
                 </div>
