@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { COURSES, TESTIMONIALS, ICONS } from '../constants';
 import CourseCard from '../components/CourseCard';
 import TestimonialCard from '../components/TestimonialCard';
+import { AboutSection, ContactSection } from '../components/Sections';
 
 interface HomePageProps {
     onEnquireClick: () => void;
@@ -11,7 +12,7 @@ interface HomePageProps {
 
 const HomePage: React.FC<HomePageProps> = ({ onEnquireClick }) => {
     return (
-        <div className="space-y-24 md:space-y-32">
+    <div className="space-y-24 md:space-y-32">
             {/* Hero Section */}
             <section className="relative h-[80vh] min-h-[500px] flex items-center justify-center text-center text-white -mt-20">
                 <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
@@ -27,7 +28,7 @@ const HomePage: React.FC<HomePageProps> = ({ onEnquireClick }) => {
                         <Link to="/courses" className="w-full sm:w-auto bg-[#6ED25D] text-brand-dark font-bold py-3 px-8 rounded-md hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105">
                             Explore Courses
                         </Link>
-                        <button onClick={onEnquireClick} className="w-full sm:w-auto bg-transparent border-2 border-[#6ED25D] text-[#6ED25D] font-bold py-3 px-8 rounded-md hover:bg-brand-blue hover:text-brand-dark transition-colors duration-300">
+                        <button onClick={onEnquireClick} className="w-full sm:w-auto bg-transparent border-2 border-[#6ED25D] text-[#6ED25D] font-bold py-3 px-8 rounded-md hover:bg-[#6ED25D] hover:text-brand-dark transition-colors duration-300">
                             Enquire Now
                         </button>
                     </div>
@@ -55,8 +56,11 @@ const HomePage: React.FC<HomePageProps> = ({ onEnquireClick }) => {
                 </div>
             </section>
 
+            {/* About (inline section for one-page flow) */}
+            <AboutSection />
+
             {/* Courses Preview */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <section id="courses-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                  <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold">Our Premier Courses</h2>
                     <p className="mt-4 text-lg text-brand-light-gray max-w-2xl mx-auto">
@@ -76,7 +80,7 @@ const HomePage: React.FC<HomePageProps> = ({ onEnquireClick }) => {
             </section>
 
             {/* Testimonials */}
-            <section className="bg-brand-gray py-20">
+            <section id="testimonials-section" className="bg-brand-gray py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-bold">What Our Students Say</h2>
@@ -91,6 +95,9 @@ const HomePage: React.FC<HomePageProps> = ({ onEnquireClick }) => {
                     </div>
                 </div>
             </section>
+
+            {/* Contact (inline) */}
+            <ContactSection />
         </div>
     );
 };

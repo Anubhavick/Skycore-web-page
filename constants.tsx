@@ -8,7 +8,7 @@ export const COURSES: Course[] = [
         title: 'Commercial Pilot License (CPL)',
         shortDescription: 'Comprehensive ground and flight training to become a professional commercial pilot.',
         highlights: ['DGCA Syllabus', '200+ Flying Hours', 'Multi-Engine Rating'],
-        imageUrl: 'assets/image0.jpg', //600 400
+    imageUrl: 'https://picsum.photos/seed/cpl/800/600', //600 400
         overview: 'Our Commercial Pilot License (CPL) program is the definitive path to a career in aviation. This intensive course covers all DGCA-prescribed subjects, from air navigation to meteorology, and includes over 200 hours of real-world flight training in our modern fleet.',
         details: {
             duration: '12-18 Months',
@@ -25,7 +25,7 @@ export const COURSES: Course[] = [
         title: 'Private Pilot License (PPL)',
         shortDescription: 'Master the fundamentals of flight and earn your license to fly recreationally.',
         highlights: ['40+ Flying Hours', 'Solo Flying Experience', 'Flexible Schedule'],
-        imageUrl: 'assets/image1.jpg',
+    imageUrl: 'https://picsum.photos/seed/ppl/800/600',
         overview: 'The Private Pilot License (PPL) is your first step into the world of aviation. Ideal for enthusiasts, this course provides the skills and knowledge to fly single-engine aircraft safely and confidently for personal transport or recreation.',
         details: {
             duration: '6-8 Months',
@@ -41,7 +41,7 @@ export const COURSES: Course[] = [
         title: 'Airline Transport Pilot License (ATPL)',
         shortDescription: 'The highest level of pilot certification, preparing you for command in commercial airlines.',
         highlights: ['Advanced Jet Training', 'DGCA Exam Prep', 'Type Rating Prep'],
-        imageUrl: 'assets/image2.jpg',
+    imageUrl: 'https://picsum.photos/seed/atpl/800/600',
         overview: 'The ATPL is the pinnacle of pilot certification. This program is designed for CPL holders aspiring to become airline captains. It involves extensive theoretical knowledge instruction for all DGCA ATPL papers and preparation for type rating.',
         details: {
             duration: '6 Months (Ground Classes)',
@@ -57,7 +57,7 @@ export const COURSES: Course[] = [
         title: 'Drone Pilot Training',
         shortDescription: 'Become a certified drone pilot for commercial operations in various industries.',
         highlights: ['DGCA Certified', 'Hands-on Training', 'Industry Applications'],
-        imageUrl: 'assets/image3.jpg',
+    imageUrl: 'https://picsum.photos/seed/drone/800/600',
         overview: 'The drone industry is booming. Our certified training program equips you with the skills to operate drones safely and legally for commercial purposes, including cinematography, surveying, and agriculture.',
         details: {
             duration: '2 Weeks',
@@ -96,19 +96,19 @@ export const INSTRUCTORS: Instructor[] = [
         name: 'Capt. Arjun Singh',
         title: 'Chief Flight Instructor',
         bio: 'With over 15,000 hours of flying experience on Airbus A320 and Boeing 737, Capt. Singh brings a wealth of airline industry knowledge to his instruction.',
-        imageUrl: ''
+    imageUrl: 'https://picsum.photos/seed/arjun/800/600'
     },
     {
         name: 'Sanjana Kapoor',
         title: 'Ground School Head',
         bio: 'An expert in Air Navigation and Meteorology, Sanjana has helped over 500 students clear their DGCA exams with flying colors.',
-        imageUrl: ''
+    imageUrl: 'https://picsum.photos/seed/sanjana/800/600'
     },
     {
         name: 'Vikram Rathore',
         title: 'Multi-Engine Instructor',
         bio: 'Vikram specializes in multi-engine and instrument rating training, ensuring students are proficient in handling complex aircraft in all conditions.',
-        imageUrl: ''
+    imageUrl: 'https://picsum.photos/seed/vikram/800/600'
     }
 ];
 

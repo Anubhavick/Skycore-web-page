@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link, useLocation, useNavigate } from 'react-router-dom';
 
 interface HeaderProps {
     onEnquireClick: () => void;
@@ -18,18 +18,41 @@ const Header: React.FC<HeaderProps> = ({ onEnquireClick }) => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const navLinkClasses = "text-brand-light-gray hover:text-brand-blue transition-colors duration-300 px-3 py-2 rounded-md text-sm font-medium";
+    const navLinkClasses = "text-brand-light-gray hover:text-brand-blue transition-colors duration-300 px-4 py-2 rounded-md text-sm font-medium";
     const activeLinkClasses = "text-brand-blue";
     
     const getNavLinkClass = ({ isActive }: { isActive: boolean }) => 
         `${navLinkClasses} ${isActive ? activeLinkClasses : ''}`;
 
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const scrollToSection = (id: string) => {
+        const el = document.getElementById(id);
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+
+    const handleNavClick = (e: React.MouseEvent, targetId: string, path = '/') => {
+        e.preventDefault();
+        if (location.pathname === '/' || location.pathname === '') {
+            // already on homepage
+            scrollToSection(targetId);
+        } else {
+            // navigate to home first, then scroll after a tick
+            navigate('/');
+            setTimeout(() => scrollToSection(targetId), 60);
+        }
+    };
+
     const navLinks = (
         <>
             <NavLink to="/" className={getNavLinkClass}>Home</NavLink>
-            <NavLink to="/about" className={getNavLinkClass}>About</NavLink>
-            <NavLink to="/courses" className={getNavLinkClass}>Courses</NavLink>
-            <NavLink to="/contact" className={getNavLinkClass}>Contact</NavLink>
+            {/* Use custom click handlers to perform in-page scrolls */}
+            <a href="/#about-section" onClick={(e) => handleNavClick(e, 'about-section')} className={navLinkClasses}>About</a>
+            <a href="/#courses-section" onClick={(e) => handleNavClick(e, 'courses-section')} className={navLinkClasses}>Courses</a>
+            <a href="/#contact-section" onClick={(e) => handleNavClick(e, 'contact-section')} className={navLinkClasses}>Contact</a>
         </>
     );
 
@@ -39,8 +62,8 @@ const Header: React.FC<HeaderProps> = ({ onEnquireClick }) => {
                 <div className="flex items-center justify-between h-20">
                     <div className="flex-shrink-0">
                         <Link to="/" className="text-white text-2xl font-bold flex items-center">
-                        <img src="/assets/skycore-logo.svg" alt="Skycore Logo" className="h-11 w-11 mr-2" />
-                            Skycore
+                        <img src="/assets/skycore-logo.svg" alt="Skycore Logo" className="h-11 w-11 mr-3 filter brightness-125" />
+                            <span className="ml-1">Skycore</span>
                         </Link>
                     </div>
                     <div className="hidden md:block">
