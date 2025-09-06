@@ -38,17 +38,17 @@ const HomePage: React.FC<HomePageProps> = ({ onEnquireClick }) => {
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                     <div className="p-6">
-                        <ICONS.Certified />
+                        <img/>
                         <h3 className="mt-4 text-xl font-bold">Certified Instructors</h3>
                         <p className="mt-2 text-brand-light-gray">Learn from seasoned pilots with thousands of hours of experience.</p>
                     </div>
                     <div className="p-6">
-                        <ICONS.Training />
+                        <img/>
                         <h3 className="mt-4 text-xl font-bold">Real-World Training</h3>
                         <p className="mt-2 text-brand-light-gray">Our curriculum focuses on practical skills for real cockpit scenarios.</p>
                     </div>
                     <div className="p-6">
-                        <ICONS.Dgca />
+                        <img/>
                         <h3 className="mt-4 text-xl font-bold">DGCA Focused</h3>
                         <p className="mt-2 text-brand-light-gray">Structured courses designed to help you ace all DGCA examinations.</p>
                     </div>
