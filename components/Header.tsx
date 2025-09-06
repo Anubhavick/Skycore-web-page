@@ -39,8 +39,8 @@ const Header: React.FC<HeaderProps> = ({ onEnquireClick }) => {
                 <div className="flex items-center justify-between h-20">
                     <div className="flex-shrink-0">
                         <Link to="/" className="text-white text-2xl font-bold flex items-center">
-                            <i className="fa-solid fa-jet-fighter mr-3 text-brand-blue"></i>
-                            AeroLeap
+                        <img src="/assets/skycore-logo.svg" alt="Skycore Logo" className="h-8 w-8 mr-2" />
+                            Skycore
                         </Link>
                     </div>
                     <div className="hidden md:block">

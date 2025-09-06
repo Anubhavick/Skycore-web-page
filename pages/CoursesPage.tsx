@@ -3,7 +3,6 @@ import React from 'react';
 import { COURSES } from '../constants';
 import CourseCard from '../components/CourseCard';
 
-//this is basic workign design  ok 
 
 const CoursesPage: React.FC = () => {
     return (

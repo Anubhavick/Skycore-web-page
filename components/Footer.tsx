@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
                     <div className="space-y-4">
                         <Link to="/" className="text-white text-2xl font-bold flex items-center">
                            <i className="fa-solid fa-jet-fighter mr-3 text-brand-blue"></i>
-                            AeroLeap
+                            Skycore
                         </Link>
                         <p className="text-brand-light-gray text-sm">Empowering Tomorrow’s Aviators with world-class training and infrastructure.</p>
                         <div className="flex space-x-6">
