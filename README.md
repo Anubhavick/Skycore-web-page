@@ -1,6 +1,6 @@
 # Skycore Flight Academy — Website
 
-This repository contains the Skycore (AeroLeap) flight academy marketing and course site — a commercial, paid project for an aviation training company. The site is built with React + Vite + TypeScript and uses Tailwind CSS for styling.
+This repository contains the Skycore flight academy marketing and course site — a commercial, paid project for an aviation training company. The site is built with React + Vite + TypeScript and uses Tailwind CSS for styling.
 
 IMPORTANT: This repository contains work owned by the client. The code and assets are confidential and must not be shared outside authorized parties. Replace any placeholder contact details or company names with the official values before sharing.
 
