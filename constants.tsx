@@ -8,7 +8,7 @@ export const COURSES: Course[] = [
         title: 'Commercial Pilot License (CPL)',
         shortDescription: 'Comprehensive ground and flight training to become a professional commercial pilot.',
         highlights: ['DGCA Syllabus', '200+ Flying Hours', 'Multi-Engine Rating'],
-        imageUrl: 'https://picsum.photos/seed/cpl/600/400',
+        imageUrl: 'assets/image0.jpg', //600 400
         overview: 'Our Commercial Pilot License (CPL) program is the definitive path to a career in aviation. This intensive course covers all DGCA-prescribed subjects, from air navigation to meteorology, and includes over 200 hours of real-world flight training in our modern fleet.',
         details: {
             duration: '12-18 Months',
@@ -25,7 +25,7 @@ export const COURSES: Course[] = [
         title: 'Private Pilot License (PPL)',
         shortDescription: 'Master the fundamentals of flight and earn your license to fly recreationally.',
         highlights: ['40+ Flying Hours', 'Solo Flying Experience', 'Flexible Schedule'],
-        imageUrl: 'https://picsum.photos/seed/ppl/600/400',
+        imageUrl: 'assets/image1.jpg',
         overview: 'The Private Pilot License (PPL) is your first step into the world of aviation. Ideal for enthusiasts, this course provides the skills and knowledge to fly single-engine aircraft safely and confidently for personal transport or recreation.',
         details: {
             duration: '6-8 Months',
@@ -41,7 +41,7 @@ export const COURSES: Course[] = [
         title: 'Airline Transport Pilot License (ATPL)',
         shortDescription: 'The highest level of pilot certification, preparing you for command in commercial airlines.',
         highlights: ['Advanced Jet Training', 'DGCA Exam Prep', 'Type Rating Prep'],
-        imageUrl: 'https://picsum.photos/seed/atpl/600/400',
+        imageUrl: 'assets/image2.jpg',
         overview: 'The ATPL is the pinnacle of pilot certification. This program is designed for CPL holders aspiring to become airline captains. It involves extensive theoretical knowledge instruction for all DGCA ATPL papers and preparation for type rating.',
         details: {
             duration: '6 Months (Ground Classes)',
@@ -57,7 +57,7 @@ export const COURSES: Course[] = [
         title: 'Drone Pilot Training',
         shortDescription: 'Become a certified drone pilot for commercial operations in various industries.',
         highlights: ['DGCA Certified', 'Hands-on Training', 'Industry Applications'],
-        imageUrl: 'https://picsum.photos/seed/drone/600/400',
+        imageUrl: 'assets/image3.jpg',
         overview: 'The drone industry is booming. Our certified training program equips you with the skills to operate drones safely and legally for commercial purposes, including cinematography, surveying, and agriculture.',
         details: {
             duration: '2 Weeks',
@@ -75,19 +75,19 @@ export const TESTIMONIALS: Testimonial[] = [
         quote: 'The instructors are incredibly experienced and supportive. AeroLeap didn’t just teach me to fly; they prepared me for a career.',
         name: 'Rohan Sharma',
         title: 'First Officer, Indigo',
-        imageUrl: 'https://picsum.photos/seed/rohan/100/100'
+        imageUrl: ''
     },
     {
         quote: 'From the state-of-the-art simulators to the well-maintained aircraft, the training infrastructure is top-notch.',
         name: 'Priya Verma',
         title: 'CPL Holder',
-        imageUrl: 'https://picsum.photos/seed/priya/100/100'
+        imageUrl: ''
     },
     {
         quote: 'The focused DGCA exam preparation was a game-changer. I cleared all my papers in the first attempt thanks to their guidance.',
         name: 'Ankit Desai',
         title: 'ATPL Student',
-        imageUrl: 'https://picsum.photos/seed/ankit/100/100'
+        imageUrl: ''
     }
 ];
 
@@ -96,24 +96,24 @@ export const INSTRUCTORS: Instructor[] = [
         name: 'Capt. Arjun Singh',
         title: 'Chief Flight Instructor',
         bio: 'With over 15,000 hours of flying experience on Airbus A320 and Boeing 737, Capt. Singh brings a wealth of airline industry knowledge to his instruction.',
-        imageUrl: 'https://picsum.photos/seed/arjun/400/400'
+        imageUrl: ''
     },
     {
         name: 'Sanjana Kapoor',
         title: 'Ground School Head',
         bio: 'An expert in Air Navigation and Meteorology, Sanjana has helped over 500 students clear their DGCA exams with flying colors.',
-        imageUrl: 'https://picsum.photos/seed/sanjana/400/400'
+        imageUrl: ''
     },
     {
         name: 'Vikram Rathore',
         title: 'Multi-Engine Instructor',
         bio: 'Vikram specializes in multi-engine and instrument rating training, ensuring students are proficient in handling complex aircraft in all conditions.',
-        imageUrl: 'https://picsum.photos/seed/vikram/400/400'
+        imageUrl: ''
     }
 ];
 
 export const ICONS = {
-    Certified: () => <i className="fa-solid fa-certificate text-brand-blue text-4xl"></i>,
-    Training: () => <i className="fa-solid fa-plane-up text-brand-blue text-4xl"></i>,
-    Dgca: () => <i className="fa-solid fa-award text-brand-blue text-4xl"></i>,
+    Certified: () => <i className="fa-solid fa-certificate text-[#6ED25D] text-4xl"></i>,
+    Training: () => <i className="fa-solid fa-plane-up text-[#6ED25D] text-4xl"></i>,
+    Dgca: () => <i className="fa-solid fa-award text-[#6ED25D] text-4xl"></i>,
 };
